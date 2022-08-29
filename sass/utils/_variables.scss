@@ -12,6 +12,9 @@
   --exemple-border-color: #eeeeee;
   --primary-icon-color: #afb1b8;
 
-  /* decor */
+  /* function */
   --hover-focus-decor-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* decor */
+  --hero-bg-gradient: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 }

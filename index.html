@@ -21,22 +21,16 @@
     <!-- шапка -->
     <header class="page-header">
       <div class="page-header__container container">
-        <nav>
-          <div class="nav">
-            <!-- лого в хедері -->
+        <nav class="nav">
               <a class="logo link" href="./index.html" lang="en">
                 Web<span class="logo--color-black">Studio</span>
               </a>
-            <!-- навігаційне меню -->
             <ul class="nav__list list">
               <li><a class="nav__link link nav__link--actual" href="./index.html">Студія</a></li>
               <li><a class="nav__link link" href="./portfolio.html">Портфоліо</a></li>
               <li><a class="nav__link link" href="">Контакти</a></li>
             </ul>
-          </div>
         </nav>
-
-        <!-- контакти в шапці -->
         <ul class="header-contacts list">
           <li>
             <a class="header-contacts__link link" href="mailto:info@devstudio.com">
@@ -140,12 +134,12 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team__list list">
             <li class="team__cards">
-              <img
-                class="team__photo"
-                src="./images/ihordemianenko.jpg"
-                alt="Ігор Дем'яненко"
-                width="270"
-              />
+              <picture>
+                <source srcset="./images/desktop/studio/ihordemianenko-desktop.jpg" media="(min-width: 1200px)" />
+                <source srcset="./images/tablet/studio/ihordemianenko-tablet.jpg" media="(min-width: 768px)" />
+                <img class="team__photo" 
+                src="./images/mob/studio/ihordemianenko-mob.jpg" alt="Ігор Дем'яненко" />
+              </picture>
               <h3 class="team__title">Ігор Дем'яненко</h3>
               <p class="team__text" lang="en">Product Designer</p>
               <ul class="social list">
@@ -188,7 +182,12 @@
               </ul>
             </li>
             <li class="team__cards">
-              <img class="team__photo" src="./images/olhariepina.jpg" alt="Ольга Рєпіна" width="270" />
+              <picture>
+                <source srcset="./images/desktop/studio/olhariepina-desktop.jpg" media="(min-width: 1200px)" />
+                <source srcset="./images/tablet/studio/olhariepina-tablet.jpg" media="(min-width: 768px)" />
+                <img class="team__photo" 
+                src="./images/mob/studio/olhariepina-mob.jpg" alt="Ольга Рєпіна" />
+              </picture>
               <h3 class="team__title">Ольга Рєпіна</h3>
               <p class="team__text" lang="en">Frontend Developer</p>
               <ul class="social list">
@@ -231,12 +230,12 @@
               </ul>
             </li>
             <li class="team__cards">
-              <img
-                class="team__photo"
-                src="./images/mykolatarasov.jpg"
-                alt="Микола Тарасов"
-                width="270"
-              />
+              <picture>
+                <source srcset="./images/desktop/studio/mykolatarasov-desktop.jpg" media="(min-width: 1200px)" />
+                <source srcset="./images/tablet/studio/mykolatarasov-tablet.jpg" media="(min-width: 768px)" />
+                <img class="team__photo" 
+                src="./images/mob/studio/mykolatarasov-mob.jpg" alt="Микола Тарасов" />
+              </picture>
               <h3 class="team__title">Микола Тарасов</h3>
               <p class="team__text" lang="en">Marketing</p>
               <ul class="social list">
@@ -279,12 +278,12 @@
               </ul>
             </li>
             <li class="team__cards">
-              <img
-                class="team__photo"
-                src="./images/mykhailoiermakov.jpg"
-                alt="Михайло Єрмаков"
-                width="270"
-              />
+              <picture>
+                <source srcset="./images/desktop/studio/mykhailoyermakov-desktop.jpg" media="(min-width: 1200px)" />
+                <source srcset="./images/tablet/studio/mykhailoyermakov-tablet.jpg" media="(min-width: 768px)" />
+                <img class="team__photo" 
+                src="./images/mob/studio/mykhailoyermakov-mob.jpg" alt="Михайло Єрмаков" />
+              </picture>
               <h3 class="team__title">Михайло Єрмаков</h3>
               <p class="team__text" lang="en">UI Designer</p>
               <ul class="social list">
@@ -332,70 +331,74 @@
 
       <!-- Постійні клієнти -->
       <section class="clients section">
-        <h2 class="section-title">Постійні клієнти</h2>
-        <ul class="clients__list list">
-          <li>
-            <a class="clients__link link" href="#">
-              <div class="clients__wrap">
-                <svg class="clients__icon" width="106" height="60">
-                  <use href="./images/symbol-defs.svg#icon-client-1"></use>
-                </svg>
-              </div>
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link link" href="#">
-              <div class="clients__wrap">
-                <svg class="clients__icon" width="106" height="60">
-                  <use href="./images/symbol-defs.svg#icon-client-2"></use>
-                </svg>
-              </div>
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link link" href="#">
-              <div class="clients__wrap">
-                <svg class="clients__icon" width="106" height="60">
-                  <use href="./images/symbol-defs.svg#icon-client-3"></use>
-                </svg>
-              </div>
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link link" href="#">
-              <div class="clients__wrap">
-                <svg class="clients__icon" width="106" height="60">
-                  <use href="./images/symbol-defs.svg#icon-client-4"></use>
-                </svg>
-              </div>
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link link" href="#">
-              <div class="clients__wrap">
-                <svg class="clients__icon" width="106" height="60">
-                  <use href="./images/symbol-defs.svg#icon-client-5"></use>
-                </svg>
-              </div>
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link link" href="#">
-              <div class="clients__wrap">
-                <svg class="clients__icon" width="106" height="60">
-                  <use href="./images/symbol-defs.svg#icon-client-6"></use>
-                </svg>
-              </div>
-            </a>
-          </li>
-        </ul>
+<div class="container">
+          <h2 class="section-title">Постійні клієнти</h2>
+          <ul class="clients__list list">
+            <li>
+              <a class="clients__link link" href="#">
+                <div class="clients__wrap">
+                  <svg class="clients__icon" width="106" height="60">
+                    <use href="./images/symbol-defs.svg#icon-client-1"></use>
+                  </svg>
+                </div>
+              </a>
+            </li>
+            <li class="clients__item">
+              <a class="clients__link link" href="#">
+                <div class="clients__wrap">
+                  <svg class="clients__icon" width="106" height="60">
+                    <use href="./images/symbol-defs.svg#icon-client-2"></use>
+                  </svg>
+                </div>
+              </a>
+            </li>
+            <li class="clients__item">
+              <a class="clients__link link" href="#">
+                <div class="clients__wrap">
+                  <svg class="clients__icon" width="106" height="60">
+                    <use href="./images/symbol-defs.svg#icon-client-3"></use>
+                  </svg>
+                </div>
+              </a>
+            </li>
+            <li class="clients__item">
+              <a class="clients__link link" href="#">
+                <div class="clients__wrap">
+                  <svg class="clients__icon" width="106" height="60">
+                    <use href="./images/symbol-defs.svg#icon-client-4"></use>
+                  </svg>
+                </div>
+              </a>
+            </li>
+            <li class="clients__item">
+              <a class="clients__link link" href="#">
+                <div class="clients__wrap">
+                  <svg class="clients__icon" width="106" height="60">
+                    <use href="./images/symbol-defs.svg#icon-client-5"></use>
+                  </svg>
+                </div>
+              </a>
+            </li>
+            <li class="clients__item">
+              <a class="clients__link link" href="#">
+                <div class="clients__wrap">
+                  <svg class="clients__icon" width="106" height="60">
+                    <use href="./images/symbol-defs.svg#icon-client-6"></use>
+                  </svg>
+                </div>
+              </a>
+            </li>
+          </ul>
+</>
       </section>
     </main>
 
     <!-- Підвал -->
     <footer class="page-footer">
       <div class="page-footer__container container">
-        <div>
+      <div class="page-footer__logoandsocial-wrap">
+        <!-- лого і контакти -->
+        <div class="page-footer__wrap">
           <a class="logo link" href="./index.html" lang="en">
             Web<span class="logo--color-white">Studio</span>
           </a>
@@ -420,7 +423,6 @@
             </ul>
           </address>
         </div>
-
         <!-- соцмережі в підвалі -->
         <div class="footer-social">
           <h3 class="title title--footer-social">приєднуйтесь</h3>
@@ -463,9 +465,9 @@
                 </li>
           </ul>
         </div>
-
+      </div>
         <!-- форма підписки -->
-      <div class="subscribe">
+        <div class="subscribe">
         <h3 class="title title--subscribe">Підпишіться на розсилку</h3>
         <div class="subscribe__form">
           <input class="subscribe__email" type="email" name="subsribe-email" placeholder="E-mail">
@@ -476,7 +478,7 @@
               </svg>
           </button>
         </div>
-      </div>
+        </div>
       </div>
     </footer>
     <!-- modal window -->

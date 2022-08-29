@@ -1,31 +1,54 @@
 .hero {
   background-color: var(--bg-color-dark);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/hero-bg.jpg);
+  background-image: var(--hero-bg-gradient),
+    url(../images/mob/studio/hero-mob.jpg);
   background-size: cover;
   text-align: center;
   padding: 0;
   
+  @include tablet {
+    background-image: var(--hero-bg-gradient),
+    url(../images/tablet/studio/hero-tablet.jpg);
+  }
+  @include desktop {
+    background-image: var(--hero-bg-gradient),
+    url(../images/desktop/studio/hero-desktop.jpg);
+  }
+  
   &__container {
   display: flex;
-  min-height: 600px;
+  min-height: 400px;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  
+  @include desktop {
+    min-height: 600px;
+  }
   }
 
   &__wrap {
   display: block;
-  width: 696px;
+  max-width: 100%;
+  width: 360px;
+
+  @include desktop {
+    width: 696px;
+  }
   }
 
   &__title {
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   color: var(--secondary-accent-color);
   text-transform: uppercase;
+  
+  @include desktop {
+    font-size: 44px;
+    line-height: 1.36;  
+  }
   }
 
   &__button {

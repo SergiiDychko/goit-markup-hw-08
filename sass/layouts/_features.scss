@@ -1,7 +1,18 @@
 .features {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
+
+    &__item {
+    max-width: 450px;
+    @include tablet {
+      max-width: 354px;
+    }
+    @include desktop {
+      max-width: 270px;
+    }
+  }
 
   &__icon {
     display: flex;
@@ -11,10 +22,6 @@
     background-color: var(--bg-color-light);
     height: 120px;
     border-radius: 4px;
-  }
-
-  &__item {
-    width: 270px;
   }
 
   &__title {

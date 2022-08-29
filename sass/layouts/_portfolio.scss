@@ -1,17 +1,17 @@
 .filter {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  row-gap: 15px;
   margin-bottom: 50px;
-
-  &__item {
-    margin-right: 8px;
-
-    &:last-child {
-      margin-right: 0;
-    }
+  width: 80%;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    width: 100%;
   }
 
     &__button {
+      min-width: 73px;
     padding: 6px 22px;
     font-size: 16px;
     font-weight: 500;
@@ -33,7 +33,6 @@
     }
 
     &--actual {
-      padding: 6px 25px;
       background-color: var(--primary-accent-color);
       color: var(--secondary-accent-color);
     }
@@ -44,11 +43,17 @@
 
 .portfolio {
   &__item {
-    width: 370px;
+    width: 450px;
     transition: box-shadow var(--hover-focus-decor-func);
     &:hover {
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+    @include tablet {
+      width: 354px;
+    }
+    @include desktop {
+      width: 370px;
     }
   }
 
@@ -65,7 +70,7 @@
   }
   
   &__meta {
-    padding: 20px 0px 20px 24px;
+    padding: 20px 24px;
     border: var(--exemple-border-color) solid 1px;
     border-top: none;
   }
@@ -90,8 +95,8 @@
   
   &__overlay {
     position: absolute;
-    padding: 63px 24px;
-    width: 100%;
+    padding: 77px 24px;
+    width: inherit;
     height: 294px;
     background-color: rgba(33, 150, 243, 0.9);
     font-size: 18px;
@@ -99,6 +104,13 @@
     letter-spacing: 0.03em;
     color: var(--secondary-accent-color);
     transition: transform var(--hover-focus-decor-func);
+
+    @include tablet {
+
+    }
+    @include desktop {
+      padding: 63px 24px;
+    }
 
     .portfolio__item:hover & {
     transform: translateY(-100%);

@@ -3,11 +3,26 @@
   
   &__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    height: 60px;
+    @include tablet {
+      height: 100%;
+      justify-content: space-between;
+
+    }
+    @include desktop {
+      height: 100%;
+    justify-content: space-between;
+
+    }
   }
   & .logo {
-    margin-right: 93px;
+    @include tablet {
+      margin-right: 87px;
+    }
+    @include desktop {
+      margin-right: 93px;
+    }
   }
 }
 
@@ -16,9 +31,15 @@
   align-items: center;
 
   &__list {
+    visibility: hidden;
+    position: absolute;
     display: flex;
     align-items: center;
     gap: 50px;
+    @media screen and (min-width: 768px) {
+      visibility: visible;
+      position: static;
+    } 
   }
   &__link {
     padding: 32px 0;
@@ -55,17 +76,37 @@
 }
 
 .header-contacts {
+  visibility: hidden;
   display: flex;
-  align-items: center;
-  gap: 50px;
+  position: absolute;
+  
+  @include tablet {
+    visibility: visible;
+    position: static;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  @include desktop {
+    visibility: visible;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+  
 
   &__link {
     display: flex;
     align-items: center;
     font-weight: 500;
+      font-size: 12px;
     line-height: 1.14;
     color: var(--primary-text-color);
     transition: color var(--hover-focus-decor-func);
+    @include desktop {
+      font-size: 14px;
+    }
     
     &:hover,
     &:focus {
