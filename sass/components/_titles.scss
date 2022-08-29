@@ -1,0 +1,21 @@
+.section-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--title-text-color);
+}
+
+.title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    text-transform: uppercase;
+  
+    &--footer-social,
+    &--subscribe {
+      margin-bottom: 20px;
+      color: var(--secondary-accent-color);
+  }
+}

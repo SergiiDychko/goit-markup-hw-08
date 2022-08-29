@@ -1,0 +1,79 @@
+.page-footer {
+  padding: 60px 0;
+  background-color: var(--bg-color-dark);
+}
+.page-footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+.page-footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.footer-contacts {
+  &__item {
+    margin-bottom: 9px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: var(--footer-text-color);
+    transition: color var(--hover-focus-decor-func);
+    &:hover,
+    &:focus {
+      color: var(--primary-accent-color);
+    }
+    &--map {
+      color: var(--secondary-accent-color);
+    }
+  }
+}
+
+.footer-social {
+  margin-top: 12px;
+}
+
+.subscribe {
+  margin-top: 12px;
+
+  &__form {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__email {
+    width: 358px;
+    height: 50px;
+    padding: 0 16px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: none;
+    color: var(--footer-text-color);
+    margin-right: 12px;
+    transition: border-color var(--hover-focus-decor-func);
+    transition: background-color var(--hover-focus-decor-func);
+    &:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    }
+    &:focus {
+      border-color: var(--secondary-accent-color);
+      background-color: rgba(255, 255, 255, 0.1)
+    }
+  }
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 200px;
+    height: 50px;
+    }
+
+  &__icon {
+    fill: var(--secondary-accent-color);
+  }
+}

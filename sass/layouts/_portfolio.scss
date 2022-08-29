@@ -1,0 +1,107 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  &__item {
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+    &__button {
+    padding: 6px 22px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.63;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--bg-color-light);
+    color: var(--title-text-color);
+    transition: background-color var(--hover-focus-decor-func),
+    color var(--hover-focus-decor-func),
+    box-shadow var(--hover-focus-decor-func);
+
+    &:hover,
+    &:focus {
+      background-color: var(--primary-accent-color);
+      color: var(--secondary-accent-color);
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+
+    &--actual {
+      padding: 6px 25px;
+      background-color: var(--primary-accent-color);
+      color: var(--secondary-accent-color);
+    }
+  }
+}
+
+
+
+.portfolio {
+  &__item {
+    width: 370px;
+    transition: box-shadow var(--hover-focus-decor-func);
+    &:hover {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  &__img {
+    width: 100%;
+    border: var(--exemple-border-color) solid 1px;
+    border-bottom: none;
+  }
+  
+  &__meta {
+    padding: 20px 0px 20px 24px;
+    border: var(--exemple-border-color) solid 1px;
+    border-top: none;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    color: var(--title-text-color);
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.88;
+  }
+
+  &__wrap {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  &__overlay {
+    position: absolute;
+    padding: 63px 24px;
+    width: 100%;
+    height: 294px;
+    background-color: rgba(33, 150, 243, 0.9);
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--secondary-accent-color);
+    transition: transform var(--hover-focus-decor-func);
+
+    .portfolio__item:hover & {
+    transform: translateY(-100%);
+    }
+  }
+}
