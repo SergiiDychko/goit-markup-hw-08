@@ -4,7 +4,6 @@
   column-gap: 8px;
   row-gap: 15px;
   margin-bottom: 50px;
-  width: 80%;
   @media screen and (min-width: 768px) {
     justify-content: center;
     width: 100%;
@@ -12,17 +11,17 @@
 
     &__button {
       min-width: 73px;
-    padding: 6px 22px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.63;
-    border: none;
-    border-radius: 4px;
-    background-color: var(--bg-color-light);
-    color: var(--title-text-color);
-    transition: background-color var(--hover-focus-decor-func),
-    color var(--hover-focus-decor-func),
-    box-shadow var(--hover-focus-decor-func);
+      padding: 6px 22px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.63;
+      border: transparent;
+      border-radius: 4px;
+      background-color: var(--bg-color-light);
+      color: var(--title-text-color);
+      transition: background-color var(--hover-focus-decor-func),
+      color var(--hover-focus-decor-func),
+      box-shadow var(--hover-focus-decor-func);
 
     &:hover,
     &:focus {

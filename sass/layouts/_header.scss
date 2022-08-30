@@ -31,12 +31,11 @@
   align-items: center;
 
   &__list {
-    visibility: hidden;
-    position: absolute;
-    display: flex;
+    display: none;
     align-items: center;
     gap: 50px;
     @media screen and (min-width: 768px) {
+      display: flex;
       visibility: visible;
       position: static;
     } 
@@ -76,13 +75,12 @@
 }
 
 .header-contacts {
-  visibility: hidden;
-  display: flex;
-  position: absolute;
+  display: none;
   
   @include tablet {
     visibility: visible;
     position: static;
+    display: flex;
     flex-direction: column;
     gap: 10px;
   }
