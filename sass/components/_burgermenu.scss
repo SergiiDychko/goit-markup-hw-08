@@ -49,6 +49,10 @@
 
   &__wrap:not(:last-child) {
     margin-bottom: 34px;
+    
+    @media screen and (max-width: 450px) {
+      margin-bottom: 20px; 
+    }
   }
   
   &__link {
@@ -60,9 +64,16 @@
     &--actual {
       color: var(--primary-accent-color);
     }
+    
+    @media screen and (max-width: 450px) {
+      font-size: 30px;   
+    }
   }
   &__contacts {
     margin-bottom: 64px;
+    @media screen and (max-width: 450px) {
+      margin-bottom: 40px;   
+    }
   }
   &__tel {
     font-weight: 500;
@@ -70,6 +81,10 @@
     line-height: 1.18;
     letter-spacing: 0.02em;
     color: var(--primary-accent-color);
+    
+    @media screen and (max-width: 450px) {
+      font-size: 26px;     
+    }
   }
   &__email {
     font-weight: 500;
@@ -77,6 +92,10 @@
     line-height: 1.17;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
+
+    @media screen and (max-width: 450px) {
+      font-size: 18px;     
+    }
   }
   &__social {
     display: flex;
@@ -101,6 +120,10 @@
     line-height: 1.22;
     letter-spacing: 0.02em;
     color: var(--primary-accent-color);
+
+    @media screen and (max-width: 450px) {
+    font-size: 10px;     
+    }
   }
 }
 
